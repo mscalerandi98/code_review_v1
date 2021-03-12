@@ -71,70 +71,70 @@ public class MainController {
     @GetMapping("/morse/{morseCode}")
     public String getMorseCode(@PathVariable String morseCode){
         String letras = "abcdefghijklmnopqrstuvwxyz 0123456789.,?!()[]&:;=+-_$@";
-        String codigo[] = new String[60];
+        String code[] = new String[60];
         String morse = " ";
 
-        codigo[0] = ".-"; //a
-        codigo[1] = "-...";//b
-        codigo[2] = "-.-.";//c
-        codigo[3] = "-..";//d
-        codigo[4] = ".";//e
-        codigo[5] = "..-.";//f
-        codigo[6] = "--.";//g
-        codigo[7] = "....";//h
-        codigo[8] = "..";//i
-        codigo[9] = ".---";//j
-        codigo[10] = "-.-";//k
-        codigo[11] = ".-..";//l
-        codigo[12] = "--";//m
-        codigo[13] = "-.";//n
-        codigo[14] = "---";//o
-        codigo[15] = ".--.";//p
-        codigo[16] = "--.-";//q
-        codigo[17] = ".-.";//r
-        codigo[18] = "...";//s
-        codigo[19] = "-";//t
-        codigo[20] = "..-";//u
-        codigo[21] = "...-";//v
-        codigo[22] = ".--";//w
-        codigo[23] = "-..-";//x
-        codigo[24] = "-.--";//y
-        codigo[25] = "--..";//z
-        codigo[26] = "/";//espacio
-        codigo[27] = "-----";//0
-        codigo[28] = ".----";//1
-        codigo[29] = "..---";//2
-        codigo[30] = "...--";//3
-        codigo[31] = "....-";//4
-        codigo[32] = ".....";//5
-        codigo[33] = "-....";//6
-        codigo[34] = "--...";//7
-        codigo[35] = "---..";//8
-        codigo[36] = "----.";//9
-        codigo[37] = ".-.-.-";//.
-        codigo[38] = "--..--";//,
-        codigo[39] = "..--..";//?
-        codigo[40] = ".-.-..";//!
-        codigo[41] = "-.--.";//(
-        codigo[42] = "-.--.-";//)
-        codigo[43] = "-.--.";//[
-        codigo[44] = "-.--.-";//]
-        codigo[45] = ".-...";//&
-        codigo[46] = "---...";//:
-        codigo[47] = "-.-.-.";//;
-        codigo[48] = "-...-";//=
-        codigo[49] = ".-.-.";//+
-        codigo[50] = "-....-";//-
-        codigo[51] = "..--.-";//_
-        codigo[52] = "...-..-";//$
-        codigo[53] = ".--.-.";//@
+        code[0] = ".-"; //a
+        code[1] = "-...";//b
+        code[2] = "-.-.";//c
+        code[3] = "-..";//d
+        code[4] = ".";//e
+        code[5] = "..-.";//f
+        code[6] = "--.";//g
+        code[7] = "....";//h
+        code[8] = "..";//i
+        code[9] = ".---";//j
+        code[10] = "-.-";//k
+        code[11] = ".-..";//l
+        code[12] = "--";//m
+        code[13] = "-.";//n
+        code[14] = "---";//o
+        code[15] = ".--.";//p
+        code[16] = "--.-";//q
+        code[17] = ".-.";//r
+        code[18] = "...";//s
+        code[19] = "-";//t
+        code[20] = "..-";//u
+        code[21] = "...-";//v
+        code[22] = ".--";//w
+        code[23] = "-..-";//x
+        code[24] = "-.--";//y
+        code[25] = "--..";//z
+        code[26] = "/";//espacio
+        code[27] = "-----";//0
+        code[28] = ".----";//1
+        code[29] = "..---";//2
+        code[30] = "...--";//3
+        code[31] = "....-";//4
+        code[32] = ".....";//5
+        code[33] = "-....";//6
+        code[34] = "--...";//7
+        code[35] = "---..";//8
+        code[36] = "----.";//9
+        code[37] = ".-.-.-";//.
+        code[38] = "--..--";//,
+        code[39] = "..--..";//?
+        code[40] = ".-.-..";//!
+        code[41] = "-.--.";//(
+        code[42] = "-.--.-";//)
+        code[43] = "-.--.";//[
+        code[44] = "-.--.-";//]
+        code[45] = ".-...";//&
+        code[46] = "---...";//:
+        code[47] = "-.-.-.";//;
+        code[48] = "-...-";//=
+        code[49] = ".-.-.";//+
+        code[50] = "-....-";//-
+        code[51] = "..--.-";//_
+        code[52] = "...-..-";//$
+        code[53] = ".--.-.";//@ 
 
         String oracion[] = morseCode.split(" ");
         int max = oracion.length;
 
         for  (int i = 0; i < max; i++){
             for (int j = 0; j < 60; j++)
-                if (oracion[i].equals(codigo[j])) {
+                if (oracion[i].equals(code[j])) {
                     morse = morse+letras.charAt(j);
                     break;
                 }
